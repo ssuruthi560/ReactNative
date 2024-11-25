@@ -1,0 +1,52 @@
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  
+  const [style, setStyle] = useState({
+    color: 'black',
+    
+  });
+  const [style2, setStyle2] = useState({
+    
+    fontSize: '20px',
+    
+  });
+  const [style3, setStyle3] = useState({
+    fontFamily: 'Arial'
+  });
+
+ 
+  const changeStyle = () => {
+    setStyle({
+      color: 'blue',
+      
+    });
+  };
+
+  const changeStyle2 = () => {
+    setStyle({
+      
+      fontSize: '30px',
+      
+    });
+  };
+
+  const changeStyle3 = () => {
+    setStyle({
+     
+      fontFamily: 'Arial'
+    });
+  };
+
+  return (
+    <div className="App">
+      <h1 style={style}>Suruthi</h1>
+      <button onClick={changeStyle}>Change Text colour</button>
+      <button onClick={changeStyle2}>Change Text size</button>
+      <button onClick={changeStyle3}>Change Text font</button>
+    </div>
+  );
+}
+
+export default App;
